@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "node"
+cache:
+  directories:
+  - node_modules
+before_install:
+    - echo bananas!
+install:
+  - npm install
+script:
+  - npm test
+  - if [[ $TRAVIS_BRANCH == "master" ]]; then npm run semantic-release; fi

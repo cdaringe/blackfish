@@ -4,7 +4,7 @@ var debug = require('debug')('blackfish:bin')
 var meow = require('meow')
 var bf = require('.')
 var path = require('path')
-var { BlackfishError } = require('./errors')
+var { BlackfishError, BlackfishCliError } = require('./errors')
 
 var mod = {
   parseFilenames (filenames) {
@@ -54,6 +54,10 @@ async function run () {
   } catch (err) {
     if (err instanceof BlackfishError) {
       console.error(err.message)
+      process.exit(1)
+    } else if (err instanceof BlackfishCliError) {
+      console.error(err.message)
+      console.error(cli.help)
       process.exit(1)
     }
     throw err

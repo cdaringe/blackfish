@@ -6,7 +6,7 @@ var composeFiles = require('./compose-files')
 var Prompt = require('prompt-checkbox')
 var pick = require('lodash/pick')
 var execa = require('execa')
-var { BlackfishError } = require('./errors')
+var { BlackfishCliError } = require('./errors')
 
 module.exports = {
   async compose (opts) {
@@ -29,6 +29,6 @@ module.exports = {
   },
   main (opts) {
     if (opts.flags.compose) return this.compose(opts)
-    throw new BlackfishError('only compose is supported')
+    throw new BlackfishCliError('only docker-compose is supported at the moment. please use -c')
   }
 }
