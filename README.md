@@ -2,13 +2,13 @@
 
 docker-compose cli extensions
 
-![interactive-compose]()
-
 ## install
 
 `npm install -g blackfish`
 
 ## usage
+
+![interactive-compose](blackfish.demo.mov.gif)
 
 ```sh
 $ bf --help
@@ -26,5 +26,8 @@ $ bf --help
   Examples
     $ bf -ci -- up
     $ bf -ci -f docker-compose.yml,docker-compose.dev.yml -- up
-
 ```
+
+## warning
+
+- alpha software! ;)

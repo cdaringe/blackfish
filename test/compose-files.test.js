@@ -20,6 +20,6 @@ ava('getFilenames', async t => {
 ava('merge', async t => {
   var filenames = await composeFiles.get(t.context.tmpDir)
   var superCompose = await composeFiles.merge(filenames)
-  t.truthy(superCompose.services.testService)
-  t.truthy(superCompose.services.aService)
+  t.truthy(superCompose.services.nginx)
+  t.truthy(superCompose.services.httpster)
 })

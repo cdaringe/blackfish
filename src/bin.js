@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var debug = require('debug')('blackfish:bin')
 var meow = require('meow')
 var bf = require('.')
 var path = require('path')
@@ -48,6 +49,7 @@ async function run () {
     })
     if (cli.input.length === 0) throw new BlackfishError('no docker[-compose] command provided')
     if (cli.flags.files) cli.flags.files = mod.parseFilenames(cli.flags.files)
+    debug('running main')
     await bf.main(cli)
   } catch (err) {
     if (err instanceof BlackfishError) {

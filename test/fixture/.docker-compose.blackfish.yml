@@ -3,3 +3,6 @@ services:
   httpster:
     image: cdaringe/httpster
     restart: unless-stopped
+  postgres:
+    image: postgres
+    restart: unless-stopped

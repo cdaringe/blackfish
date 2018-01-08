@@ -1,15 +1,18 @@
 // bf/blackfish <files>
 // console.log(wip!)
 
+var debug = require('debug')('blackfish:index')
 var composeFiles = require('./compose-files')
 var Prompt = require('prompt-checkbox')
 var pick = require('lodash/pick')
 var execa = require('execa')
+var { BlackfishError } = require('./errors')
 
 module.exports = {
   async compose (opts) {
+    debug('preparing to boot compose')
     var { files } = opts.flags
-    if (!files) files = composeFiles.get()
+    if (!files) files = await composeFiles.get()
     var superCompose = await composeFiles.merge(files)
     var prompt = new Prompt({
       name: 'images',
@@ -26,5 +29,6 @@ module.exports = {
   },
   main (opts) {
     if (opts.flags.compose) return this.compose(opts)
+    throw new BlackfishError('only compose is supported')
   }
 }

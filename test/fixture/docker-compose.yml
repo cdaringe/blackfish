@@ -1,8 +1,8 @@
 version: '3'
 services:
-  httpster:
-    image: cdaringe/httpster
+  nginx:
+    image: nginx:alpine
     restart: unless-stopped
-  aService:
-    image: cdaringe/httpster
+  postgres:
+    image: postgres
     restart: unless-stopped
