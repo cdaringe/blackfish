@@ -1,0 +1,8 @@
+version: '3'
+services:
+  httpster:
+    image: cdaringe/httpster
+    restart: unless-stopped
+  aService:
+    image: cdaringe/httpster
+    restart: unless-stopped

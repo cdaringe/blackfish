@@ -1,0 +1,5 @@
+version: '3'
+services:
+  testService:
+    image: cdaringe/httpster
+    restart: unless-stopped
