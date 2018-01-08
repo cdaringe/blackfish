@@ -1,6 +1,7 @@
 # blackfish
 
-docker-compose cli extensions
+docker-compose cli extensions <img style='display: inline' width='24px' src="https://github.com/cdaringe/blackfish/blob/master/img/logo.png?raw=true" />
+
 
 [![Build Status](https://travis-ci.org/cdaringe/blackfish.svg?branch=master)](https://travis-ci.org/cdaringe/blackfish) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
