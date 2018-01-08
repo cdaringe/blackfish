@@ -8,7 +8,7 @@ docker-compose cli extensions
 
 ## usage
 
-![interactive-compose](blackfish.demo.mov.gif)
+![interactive-compose](img/blackfish.demo.mov.gif)
 
 ```sh
 $ bf --help
