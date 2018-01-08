@@ -51,8 +51,13 @@ module.exports = {
       }
     }
     process.addListener('SIGINT', handleSignal)
-    await child
-    process.removeListener('SIGINT', handleSignal)
+    try {
+      await child
+      process.removeListener('SIGINT', handleSignal)
+    } catch (err) {
+      // stderr should have been filled by the child
+      throw new BlackfishShutdown() // eslint-disable-line
+    }
   },
   main (opts) {
     if (opts.flags.compose) return this.compose(opts)
