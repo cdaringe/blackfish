@@ -1,0 +1,24 @@
+{
+  "name": "blackfish",
+  "version": "0.0.1",
+  "description": "docker* cli extensions",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cdaringe/blackfish.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "cli"
+  ],
+  "author": "cdaringe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdaringe/blackfish/issues"
+  },
+  "homepage": "https://github.com/cdaringe/blackfish#readme"
+}
