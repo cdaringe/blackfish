@@ -8,7 +8,13 @@ docker-compose cli extensions
 
 ## usage
 
-![interactive-compose](img/blackfish.demo.mov.gif)
+blackfish installs with two executables, `blackfish`, or `bf` for short.
+
+run blackfish to glob up your compose files and run a subset of compose services.
+
+blackfish will create a new compose file based on your selection, and proxy the rest of your command off to `docker-compose`.
+
+<img width="400px" src="https://github.com/cdaringe/blackfish/blob/master/img/blackfish.demo.mov.gif?raw=true" />
 
 ```sh
 $ bf --help
