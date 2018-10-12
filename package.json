@@ -42,7 +42,7 @@
     "npm-run-all": "^4.1.2",
     "nsp": "^3.1.0",
     "nyc": "^11.4.1",
-    "semantic-release": "^11.0.2",
+    "semantic-release": "^15.0.0",
     "standard": "^10.0.3"
   },
   "dependencies": {
@@ -50,7 +50,7 @@
     "execa": "^0.8.0",
     "fs-extra": "^5.0.0",
     "js-yaml": "^3.10.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "meow": "^4.0.0",
     "prompt-checkbox": "^2.2.0"
   }
